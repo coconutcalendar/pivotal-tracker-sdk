@@ -1,0 +1,19 @@
+{
+  "name": "coconutcalendar/pivotal-tracker-sdk",
+  "description": "SDK for common resources in Pivotal Tracker API V5",
+  "type": "library",
+  "require": {
+    "saloonphp/saloon": "^2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "CoconutSoftware\\PivotalSdk\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ryan Shuya",
+      "email": "ryan.shuya@coconutsoftware.com"
+    }
+  ]
+}
