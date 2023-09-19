@@ -1,11 +1,11 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Stories;
+namespace CoconutCalendar\PivotalTrackerSdk\Stories;
 
 use Saloon\Contracts\Response;
-use CoconutSoftware\PivotalSdk\Stories\Enums\Type;
-use CoconutSoftware\PivotalSdk\Stories\Enums\State;
-use CoconutSoftware\PivotalSdk\Stories\Enums\Priority;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\Type;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\State;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\Priority;
 
 class Story
 {

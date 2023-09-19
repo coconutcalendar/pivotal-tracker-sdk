@@ -1,6 +1,6 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Stories\Enums;
+namespace CoconutCalendar\PivotalTrackerSdk\Stories\Enums;
 
 enum Type
 {

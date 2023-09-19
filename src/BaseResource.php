@@ -1,6 +1,6 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk;
+namespace CoconutCalendar\PivotalTrackerSdk;
 
 use Saloon\Contracts\Connector;
 

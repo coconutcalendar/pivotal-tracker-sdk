@@ -1,6 +1,6 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Projects;
+namespace CoconutCalendar\PivotalTrackerSdk\Projects;
 
 use Saloon\Contracts\Response;
 

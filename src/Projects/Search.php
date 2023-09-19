@@ -1,10 +1,10 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Projects;
+namespace CoconutCalendar\PivotalTrackerSdk\Projects;
 
 use Saloon\Http\Response;
 use Illuminate\Support\Collection;
-use CoconutSoftware\PivotalSdk\Stories\Story;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Story;
 
 class Search
 {

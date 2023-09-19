@@ -1,11 +1,11 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Stories\Requests;
+namespace CoconutCalendar\PivotalTrackerSdk\Stories\Requests;
 
 use Saloon\Http\Request;
 use Saloon\Enums\Method;
 use Saloon\Contracts\Response;
-use CoconutSoftware\PivotalSdk\Stories\Story;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Story;
 
 class GetStory extends Request
 {

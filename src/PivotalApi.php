@@ -1,10 +1,10 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk;
+namespace CoconutCalendar\PivotalTrackerSdk;
 
 use Saloon\Http\Connector;
-use CoconutSoftware\PivotalSdk\Stories\StoryResource;
-use CoconutSoftware\PivotalSdk\Projects\ProjectResource;
+use CoconutCalendar\PivotalTrackerSdk\Stories\StoryResource;
+use CoconutCalendar\PivotalTrackerSdk\Projects\ProjectResource;
 
 class PivotalApi extends Connector
 {

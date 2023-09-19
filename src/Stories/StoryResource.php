@@ -1,9 +1,9 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Stories;
+namespace CoconutCalendar\PivotalTrackerSdk\Stories;
 
-use CoconutSoftware\PivotalSdk\BaseResource;
-use CoconutSoftware\PivotalSdk\Stories\Requests\GetStory;
+use CoconutCalendar\PivotalTrackerSdk\BaseResource;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Requests\GetStory;
 
 class StoryResource extends BaseResource
 {

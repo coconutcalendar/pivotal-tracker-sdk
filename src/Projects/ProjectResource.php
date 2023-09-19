@@ -1,11 +1,11 @@
 <?php
 
-namespace CoconutSoftware\PivotalSdk\Projects;
+namespace CoconutCalendar\PivotalTrackerSdk\Projects;
 
-use CoconutSoftware\PivotalSdk\BaseResource;
-use CoconutSoftware\PivotalSdk\Projects\Requests\GetSearch;
-use CoconutSoftware\PivotalSdk\Projects\Requests\GetProject;
-use CoconutSoftware\PivotalSdk\Projects\Requests\GetAllProjects;
+use CoconutCalendar\PivotalTrackerSdk\BaseResource;
+use CoconutCalendar\PivotalTrackerSdk\Projects\Requests\GetSearch;
+use CoconutCalendar\PivotalTrackerSdk\Projects\Requests\GetProject;
+use CoconutCalendar\PivotalTrackerSdk\Projects\Requests\GetAllProjects;
 
 class ProjectResource extends BaseResource
 {
