@@ -17,12 +17,16 @@ class PivotalApi extends Connector implements Cacheable
 {
     use HasCaching;
 
-    public function __construct(protected string $trackerToken) {}
+    public function __construct(
+        protected string $trackerToken,
+        protected int $cacheSeconds = 600,
+        protected string $cacheLocation = 'storage/files'
+    ) {}
 
     public function resolveCacheDriver(): Driver
     {
         $files = new Filesystem();
-        $store = new FileStore($files, 'files');
+        $store = new FileStore($files, $this->cacheLocation);
         $repo = new Repository($store);
 
         return new LaravelCacheDriver($repo);
@@ -53,6 +57,6 @@ class PivotalApi extends Connector implements Cacheable
 
     public function cacheExpiryInSeconds(): int
     {
-        return 600;
+        return $this->cacheSeconds;
     }
 }
