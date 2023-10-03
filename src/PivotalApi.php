@@ -2,14 +2,30 @@
 
 namespace CoconutCalendar\PivotalTrackerSdk;
 
-use Saloon\Http\Connector;
-use CoconutCalendar\PivotalTrackerSdk\Stories\StoryResource;
 use CoconutCalendar\PivotalTrackerSdk\Projects\ProjectResource;
+use CoconutCalendar\PivotalTrackerSdk\Stories\StoryResource;
+use Illuminate\Cache\FileStore;
+use Illuminate\Cache\Repository;
+use Illuminate\Filesystem\Filesystem;
+use Saloon\CachePlugin\Contracts\Cacheable;
+use Saloon\CachePlugin\Contracts\Driver;
+use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
+use Saloon\CachePlugin\Traits\HasCaching;
+use Saloon\Http\Connector;
 
-class PivotalApi extends Connector
+class PivotalApi extends Connector implements Cacheable
 {
-    public function __construct(protected string $trackerToken)
+    use HasCaching;
+
+    public function __construct(protected string $trackerToken) {}
+
+    public function resolveCacheDriver(): Driver
     {
+        $files = new Filesystem();
+        $store = new FileStore($files, 'files');
+        $repo = new Repository($store);
+
+        return new LaravelCacheDriver($repo);
     }
 
     public function resolveBaseUrl(): string
@@ -33,5 +49,10 @@ class PivotalApi extends Connector
     public function projects(): ProjectResource
     {
         return new ProjectResource($this);
+    }
+
+    public function cacheExpiryInSeconds(): int
+    {
+        return 600;
     }
 }
