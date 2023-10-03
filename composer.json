@@ -3,7 +3,9 @@
   "description": "SDK for common resources in Pivotal Tracker API V5",
   "type": "library",
   "require": {
-    "saloonphp/saloon": "^2.10"
+    "saloonphp/saloon": "^2.10",
+    "saloonphp/cache-plugin": "^2.0",
+    "illuminate/cache": ">=8.0"
   },
   "autoload": {
     "psr-4": {

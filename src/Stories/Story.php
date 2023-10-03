@@ -2,28 +2,28 @@
 
 namespace CoconutCalendar\PivotalTrackerSdk\Stories;
 
-use Saloon\Contracts\Response;
-use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\Type;
-use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\State;
 use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\Priority;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\State;
+use CoconutCalendar\PivotalTrackerSdk\Stories\Enums\Type;
+use Saloon\Contracts\Response;
 
 class Story
 {
     public function __construct(
-        public int      $id,
-        public string   $url,
-        public int      $projectId,
-        public Type     $type,
-        public string   $name,
+        public int $id,
+        public string $url,
+        public int $projectId,
+        public Type $type,
+        public string $name,
         public Priority $priority,
-        public State    $state,
-        public array    $labels,
-        public string   $created_at,
-        public string   $updated_at,
-        public ?int     $estimate = null,
-        public ?int     $externalId = null,
-    ) {
-    }
+        public State $state,
+        public array $labels,
+        public string $created_at,
+        public string $updated_at,
+        public ?int $estimate = null,
+        public ?int $externalId = null,
+        public ?string $acceptedAt = null,
+    ) {}
 
     public static function fromResponse(Response $response): self
     {
@@ -50,6 +50,7 @@ class Story
             updated_at: $data->updated_at,
             estimate: $data->estimate ?? null,
             externalId: $data->external_id ?? null,
+            acceptedAt: $data->accepted_at ?? null,
         );
     }
 }
